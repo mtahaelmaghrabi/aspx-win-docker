@@ -20,10 +20,3 @@ RUN msbuild aspx-win-docker.csproj  /p:Configuration=Release /m /p:DeployOnBuild
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8
 WORKDIR /inetpub/wwwroot
 COPY --from=build /src/bin/Release/Publish/ .
-
-# No need for CMD command
-docker tag webapponwin:dev mtahaelmaghrabi/webapponwin:latest 
-docker image push mtahaelmaghrabi/webapponwin:latest
-# docker run -d -p 3080:80 webapponwin:dev
-# docker build -t webapponwin:dev .
-# docker exec -it <ContainerID> powershell
