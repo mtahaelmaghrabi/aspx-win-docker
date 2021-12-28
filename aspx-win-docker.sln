@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspx-win-docker", "aspx-win-docker.csproj", "{A66D6509-095F-4EA3-92AB-3553F31C398B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A66D6509-095F-4EA3-92AB-3553F31C398B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66D6509-095F-4EA3-92AB-3553F31C398B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66D6509-095F-4EA3-92AB-3553F31C398B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66D6509-095F-4EA3-92AB-3553F31C398B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E1DED22-2C9A-409C-8539-D3383F7B5F85}
+	EndGlobalSection
+EndGlobal
