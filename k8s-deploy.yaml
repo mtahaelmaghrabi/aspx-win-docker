@@ -1,0 +1,44 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: winapp
+  name: winapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: winapp
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: winapp
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": windows
+      containers:
+      - image: mtahaelmaghrabi/webapponwin:latest
+        name: webapponwin
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: winapp-lb
+  name: winapp-lb
+spec:
+  ports:
+  - name: winapp-port
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: winapp
+  type: LoadBalancer
+status:
+  loadBalancer: {}
